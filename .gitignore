@@ -1,0 +1,18 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Configuration (Sensitive data)
+.env
+
+# Logs
+*.log

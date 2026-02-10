@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.dropbox.monitor</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <!-- 请修改为实际的 python 路径, 推荐使用绝对路径 -->
+        <string>/usr/bin/python3</string> 
+        <!-- 请修改为 monitor.py 的绝对路径 -->
+        <string>/path/to/your/dropbox_monitor/monitor.py</string>
+    </array>
+    
+    <!-- 定时任务配置: 从上午9点到晚上10点，每小时执行一次 -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>13</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>15</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>0</integer></dict>
+        <dict><key>Hour</key><integer>22</integer><key>Minute</key><integer>0</integer></dict>
+    </array>
+    
+    <!-- 日志输出路径 -->
+    <key>StandardOutPath</key>
+    <string>/tmp/dropbox_monitor.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/dropbox_monitor.err</string>
+    
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
